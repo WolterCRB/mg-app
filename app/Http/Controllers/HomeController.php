@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index(Request $request)
 
     {
-        $kirgu =Kirgu::create([
+        $kirgu = Kirgu::create([
             'name' => $request->input('цемент'),
             'price' => $request->input(4999),
             'demand' => $request->input(999999),
@@ -21,7 +21,7 @@ class HomeController extends Controller
 
     public function create(Request $request)
     {
-        $model = new Items();
+        $model = new Kirgu();
         $model->name = $request->input('name');
         $model->price = $request->input('price');
         $model->demand = $request->input('demand');
