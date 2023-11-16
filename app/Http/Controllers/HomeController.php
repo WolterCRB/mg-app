@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kirgu;
 use App\Models\Products;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -10,7 +11,7 @@ class HomeController extends Controller
     public function index(Request $request)
 
     {
-        $kirgu = Items::create([
+        $kirgu =Kirgu::create([
             'name' => $request->input('цемент'),
             'price' => $request->input(4999),
             'demand' => $request->input(999999),
