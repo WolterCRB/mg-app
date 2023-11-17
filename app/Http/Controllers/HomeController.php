@@ -9,14 +9,11 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(Request $request)
-
     {
-        $kirgu = Kirgu::create([
-            'name' => $request->input('цемент'),
-            'price' => $request->input(4999),
-            'demand' => $request->input(999999),
+        $products = Kirgu::all();
+        return view('home',[
+            'kirgu' => $products
         ]);
-
     }
 
     public function create(Request $request)
