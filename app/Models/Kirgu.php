@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kirgu extends Model
 {
- protected $fillable = [
-     'price',
-     'demand',
-     'name'
- ];
+    protected $table = 'kirgu';
+     protected $fillable = [
+         'price',
+         'demand',
+         'name'
+     ];
 }
